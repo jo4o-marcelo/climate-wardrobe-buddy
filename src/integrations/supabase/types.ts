@@ -14,7 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      historico_pesquisas: {
+        Row: {
+          cidade: string
+          clima: string
+          data_pesquisa: string
+          descricao: string | null
+          id: string
+          temperatura: number
+          temperatura_max: number | null
+          temperatura_min: number | null
+          umidade: number | null
+          user_id: string
+        }
+        Insert: {
+          cidade: string
+          clima: string
+          data_pesquisa?: string
+          descricao?: string | null
+          id?: string
+          temperatura: number
+          temperatura_max?: number | null
+          temperatura_min?: number | null
+          umidade?: number | null
+          user_id: string
+        }
+        Update: {
+          cidade?: string
+          clima?: string
+          data_pesquisa?: string
+          descricao?: string | null
+          id?: string
+          temperatura?: number
+          temperatura_max?: number | null
+          temperatura_min?: number | null
+          umidade?: number | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          id: string
+          nome_completo: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          nome_completo: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          nome_completo?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

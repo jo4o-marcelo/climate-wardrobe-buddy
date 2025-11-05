@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Weather specific colors
+        sunny: "hsl(var(--sunny))",
+        rainy: "hsl(var(--rainy))",
+        cloudy: "hsl(var(--cloudy))",
+        cold: "hsl(var(--cold))",
+        hot: "hsl(var(--hot))",
       },
       borderRadius: {
         lg: "var(--radius)",
